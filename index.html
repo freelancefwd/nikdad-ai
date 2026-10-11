@@ -1,0 +1,296 @@
+<!doctype html>
+<html lang="de">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Nikdad.ai – KI-Beratung & Umsetzung</title>
+<meta name="description" content="Nikdad – KI-Berater und Head of Transformation. Vom Online-Shop über Vertriebsdigitalisierung bis zur Plattform: Strategie und Umsetzung mit KI.">
+<meta property="og:title" content="Nikdad.ai – KI-Beratung & Umsetzung">
+<meta property="og:description" content="Nikdad – KI-Berater und Head of Transformation. Vom Online-Shop über Vertriebsdigitalisierung bis zur Plattform: Strategie und Umsetzung mit KI.">
+<meta property="og:url" content="https://nikdad.ai/">
+<meta property="og:type" content="website">
+<link rel="canonical" href="https://nikdad.ai/">
+<link rel="icon" href="/favicon.svg" type="image/svg+xml">
+<style>
+@font-face{font-family:"Bricolage Grotesque";font-style:normal;font-weight:600;font-display:swap;src:url(/fonts/bricolage-grotesque-latin-600-normal.woff2) format("woff2")}
+@font-face{font-family:"Bricolage Grotesque";font-style:normal;font-weight:700;font-display:swap;src:url(/fonts/bricolage-grotesque-latin-700-normal.woff2) format("woff2")}
+@font-face{font-family:"Figtree";font-style:normal;font-weight:400;font-display:swap;src:url(/fonts/figtree-latin-400-normal.woff2) format("woff2")}
+@font-face{font-family:"Figtree";font-style:normal;font-weight:500;font-display:swap;src:url(/fonts/figtree-latin-500-normal.woff2) format("woff2")}
+@font-face{font-family:"Figtree";font-style:normal;font-weight:600;font-display:swap;src:url(/fonts/figtree-latin-600-normal.woff2) format("woff2")}
+@font-face{font-family:"Figtree";font-style:normal;font-weight:700;font-display:swap;src:url(/fonts/figtree-latin-700-normal.woff2) format("woff2")}
+@font-face{font-family:"JetBrains Mono";font-style:normal;font-weight:400;font-display:swap;src:url(/fonts/jetbrains-mono-latin-400-normal.woff2) format("woff2")}
+@font-face{font-family:"JetBrains Mono";font-style:normal;font-weight:500;font-display:swap;src:url(/fonts/jetbrains-mono-latin-500-normal.woff2) format("woff2")}
+/* Layout: one narrow reading column for the story, wide bands for projects and the service ladder */
+:root{
+  --bg:#F6F7F9; --surface:#FFFFFF; --ink:#141A2B; --muted:#5A6276; --line:#DDE1EA;
+  --lapis:#2440A8; --lapis-soft:#E6EBFA; --saffron:#D99A12;
+  --f-display:"Bricolage Grotesque", "Figtree", system-ui, sans-serif;
+  --f-body:"Figtree", system-ui, -apple-system, "Segoe UI", sans-serif;
+  --f-mono:"JetBrains Mono", ui-monospace, Menlo, Consolas, monospace;
+  --wrap:1120px;
+}
+@media (prefers-color-scheme: dark){:root:not([data-theme="light"]){
+  --bg:#0E1220; --surface:#161B2E; --ink:#EEF0F6; --muted:#A3AABD; --line:#272E45;
+  --lapis:#8EA6FF; --lapis-soft:#1C2647; --saffron:#F0B53A; color-scheme:dark}}
+:root[data-theme="dark"]{
+  --bg:#0E1220; --surface:#161B2E; --ink:#EEF0F6; --muted:#A3AABD; --line:#272E45;
+  --lapis:#8EA6FF; --lapis-soft:#1C2647; --saffron:#F0B53A; color-scheme:dark}
+
+*{box-sizing:border-box}
+body{background:var(--bg);color:var(--ink);font-family:var(--f-body);font-size:17px;line-height:1.6;padding-inline:20px}
+.wrap{max-width:var(--wrap);margin-inline:auto}
+a{color:var(--lapis)}
+a:focus-visible,button:focus-visible{outline:2px solid var(--saffron);outline-offset:3px;border-radius:4px}
+h1,h2,h3{font-family:var(--f-display);font-weight:700;line-height:1.05;letter-spacing:-.02em;text-wrap:balance;margin:0}
+p{margin:0}
+.eyebrow{font-family:var(--f-mono);font-size:12.5px;letter-spacing:.08em;text-transform:uppercase;color:var(--muted)}
+.prose{max-width:62ch}
+
+/* nav */
+header.nav{position:sticky;top:env(safe-area-inset-top,0px);z-index:5;background:color-mix(in srgb,var(--bg) 88%,transparent);backdrop-filter:blur(8px);border-bottom:1px solid var(--line);margin-inline:-20px;padding:14px 20px}
+header.nav .wrap{display:flex;align-items:center;justify-content:space-between;gap:16px;flex-wrap:wrap}
+.logo{font-family:var(--f-display);font-weight:700;letter-spacing:-.02em;font-size:22px;color:var(--ink);text-decoration:none}
+.logo span{color:var(--saffron)}
+nav{display:flex;gap:20px;flex-wrap:wrap}
+nav a{color:var(--muted);text-decoration:none;font-size:15px;font-weight:500}
+nav a:hover{color:var(--ink)}
+
+/* hero */
+.hero{padding-block:72px 56px;display:grid;grid-template-columns:1.35fr 1fr;gap:56px;align-items:end}
+.hero h1{font-size:clamp(44px,7vw,84px);letter-spacing:-.01em}
+.hero h1 em{font-style:normal;color:var(--lapis)}
+.hero .lead{margin-top:24px;font-size:20px;color:var(--muted);max-width:40ch}
+.cta-row{display:flex;gap:12px;flex-wrap:wrap;margin-top:32px}
+.btn{display:inline-flex;align-items:center;gap:8px;padding:12px 20px;border-radius:999px;font-weight:600;font-size:15px;text-decoration:none;border:1px solid var(--ink)}
+.btn.primary{background:var(--ink);color:var(--bg)}
+.btn.ghost{color:var(--ink)}
+.btn:hover{transform:translateY(-1px)}
+.log{background:var(--surface);border:1px solid var(--line);border-radius:14px;padding:22px;font-family:var(--f-mono);font-size:13px;min-width:0}
+.log h2{font-family:var(--f-mono);font-size:12px;letter-spacing:.08em;text-transform:uppercase;color:var(--muted);margin-bottom:14px}
+.log ul{list-style:none;margin:0;padding:0;display:grid;gap:12px}
+.log li{display:grid;grid-template-columns:auto 1fr;gap:12px;align-items:baseline}
+.dot{width:8px;height:8px;border-radius:50%;background:var(--saffron);display:inline-block}
+.dot.live{background:#2E9E62}
+.log b{font-weight:500;color:var(--ink)}
+.log span.s{color:var(--muted)}
+
+section{padding-block:72px;border-top:1px solid var(--line)}
+.sec-head{display:grid;grid-template-columns:1fr 1.4fr;gap:40px;margin-bottom:44px;align-items:end}
+.sec-head h2{font-size:clamp(34px,4.6vw,52px)}
+.sec-head p{color:var(--muted)}
+
+/* projects */
+.projects{display:grid;grid-template-columns:repeat(3,1fr);gap:20px}
+.proj{background:var(--surface);border:1px solid var(--line);border-radius:14px;padding:26px;display:flex;flex-direction:column;gap:14px;min-width:0}
+.proj .top{display:flex;justify-content:space-between;align-items:center;gap:12px}
+.badge{font-family:var(--f-mono);font-size:11.5px;padding:4px 10px;border-radius:999px;background:var(--lapis-soft);color:var(--lapis);white-space:nowrap}
+.proj h3{font-size:30px}
+.proj .fa{font-size:22px;color:var(--muted);font-family:var(--f-body)}
+.proj p{color:var(--muted);font-size:16px}
+.stack{font-family:var(--f-mono);font-size:12.5px;color:var(--muted);border-top:1px dashed var(--line);padding-top:12px;margin-top:auto}
+.proj a.more{font-weight:600;text-decoration:none;font-size:15px}
+.todo{font-family:var(--f-mono);font-size:12px;color:var(--saffron)}
+
+/* ladder */
+.ladder{display:grid;gap:0;border:1px solid var(--line);border-radius:14px;overflow:hidden;background:var(--surface)}
+.rung{display:grid;grid-template-columns:110px 1.1fr 1.4fr;gap:28px;padding:28px;border-top:1px solid var(--line);align-items:start}
+.rung:first-child{border-top:0}
+.lvl{font-family:var(--f-mono);font-size:13px;color:var(--muted)}
+.lvl strong{display:block;font-family:var(--f-display);font-weight:700;font-size:44px;color:var(--lapis);line-height:1}
+.rung h3{font-size:26px;margin-bottom:8px}
+.rung .who{color:var(--muted);font-size:15px}
+.rung ul{margin:0;padding-left:18px;display:grid;gap:6px;font-size:16px}
+.rung ul li::marker{color:var(--saffron)}
+
+/* sales */
+.sales-grid{display:grid;grid-template-columns:1fr 1fr;gap:56px;align-items:start}
+.quote{font-family:var(--f-display);font-size:clamp(26px,3.2vw,36px);line-height:1.2}
+.quote em{font-style:normal;color:var(--lapis)}
+.flow{list-style:none;margin:0;padding:0;counter-reset:step;display:grid;gap:18px}
+.flow li{counter-increment:step;display:grid;grid-template-columns:44px 1fr;gap:16px}
+.flow li::before{content:counter(step,decimal-leading-zero);font-family:var(--f-mono);font-size:13px;color:var(--lapis);border:1px solid var(--line);border-radius:8px;height:36px;display:grid;place-items:center;background:var(--surface)}
+.flow b{display:block;font-weight:600}
+.flow span{color:var(--muted);font-size:16px}
+.usecases{margin-top:40px;display:flex;flex-wrap:wrap;gap:10px}
+.chip{font-size:14px;border:1px solid var(--line);background:var(--surface);border-radius:999px;padding:7px 14px}
+
+/* about */
+.about{display:grid;grid-template-columns:1fr 1fr;gap:56px}
+.about .facts{display:grid;gap:18px;align-content:start}
+.fact{border-left:2px solid var(--saffron);padding-left:16px}
+.fact b{display:block}
+.fact span{color:var(--muted);font-size:16px}
+
+/* contact */
+.contact{background:var(--ink);color:var(--bg);border-radius:20px;padding:56px;display:grid;grid-template-columns:1.3fr 1fr;gap:40px;align-items:center;margin-block:72px}
+.contact h2{font-size:clamp(32px,4.4vw,50px)}
+.contact p{opacity:.8;margin-top:14px}
+.mail{display:flex;gap:10px;flex-wrap:wrap;align-items:center}
+.mail code{font-family:var(--f-mono);font-size:18px;background:color-mix(in srgb,var(--bg) 12%,transparent);padding:10px 16px;border-radius:10px;user-select:all}
+.mail button{font:inherit;font-weight:600;font-size:14px;padding:10px 16px;border-radius:999px;border:1px solid currentColor;background:transparent;color:inherit;cursor:pointer}
+footer{padding-block:24px 48px;color:var(--muted);font-size:14px;display:flex;justify-content:space-between;gap:16px;flex-wrap:wrap}
+
+@media (max-width:900px){
+  .hero,.sec-head,.sales-grid,.about,.contact{grid-template-columns:1fr}
+  .projects{grid-template-columns:1fr}
+  .rung{grid-template-columns:1fr;gap:12px}
+  .contact{padding:32px}
+}
+@media (prefers-reduced-motion:reduce){*{transition:none!important}}
+.btn{transition:transform .15s ease}
+</style>
+</head>
+<body>
+<header class="nav">
+  <div class="wrap">
+    <a class="logo" href="#top">nikdad<span>.</span>ai</a>
+    <nav aria-label="Hauptnavigation">
+      <a href="#projekte">Projekte</a>
+      <a href="#leistungen">Leistungen</a>
+      <a href="#vertrieb">Vertrieb</a>
+      <a href="#ueber">Über mich</a>
+      <a href="#kontakt">Kontakt</a>
+    </nav>
+  </div>
+</header>
+
+<main class="wrap" id="top">
+  <div class="hero">
+    <div>
+      <p class="eyebrow">Transformation · KI · Produktbau</p>
+      <h1 style="margin-top:18px">Tagsüber Transformation. <em>Nachts Produkte.</em> Beides mit KI.</h1>
+      <p class="lead">Ich bin Nikdad. Ich führe Digitalisierungsprogramme in einem Personaldienstleister und baue nebenbei eigene Produkte mit KI. Diese Erfahrung bringe ich in Ihr Projekt ein, vom ersten Online-Shop bis zur Plattform.</p>
+      <div class="cta-row">
+        <a class="btn primary" href="#kontakt">Projekt besprechen</a>
+        <a class="btn ghost" href="#projekte">Projekte ansehen ↓</a>
+      </div>
+    </div>
+    <aside class="log" aria-label="Aktueller Stand">
+      <h2>Werkbank · Oktober 2026</h2>
+      <ul>
+        <li><i class="dot live"></i><span><b>Candidate-Journey-Plattformen</b><br><span class="s">Personaldienstleister, live</span></span></li>
+        <li><i class="dot live"></i><span><b>Genealogie-Plattform</b><br><span class="s">Familienarchiv, live</span></span></li>
+        <li><i class="dot live"></i><span><b>Schmuck-Shop</b><br><span class="s">mit 3D-Ringkonfigurator</span></span></li>
+        <li><i class="dot"></i><span><b>nikdad.ai</b><br><span class="s">diese Seite, Version 1</span></span></li>
+      </ul>
+    </aside>
+  </div>
+
+  <section id="projekte" aria-labelledby="h-proj">
+    <div class="sec-head">
+      <h2 id="h-proj">Was ich gebaut habe</h2>
+      <p class="prose">Echte Produkte, mit echten Nutzern. Ich liefere die Idee, die Architektur und die Steuerung. KI-Agenten schreiben einen großen Teil des Codes. Jedes Projekt zeigt eine andere Stufe dessen, was heute mit KI möglich ist.</p>
+    </div>
+    <div class="projects">
+      <article class="proj">
+        <div class="top"><span class="badge">Personaldienstleistung</span></div>
+        <h3>Candidate-Journey-Plattformen</h3>
+        <p>Plattformen, die Kandidaten und Freelancer vom ersten Kontakt bis zum Projektstart führen. Registrierung in wenigen Schritten, KI liest den Lebenslauf aus und schlägt passende Projekte vor. Kunden, Kandidaten und das Recruiting-Team arbeiten jeweils in einem eigenen Dashboard, der Prozess läuft als Pipeline.</p>
+        <p class="stack">KI-Matching · CV-Parsing · Lead-Funnels · Pipeline-Board · Compliance-Check · Zeiterfassung</p>
+        <a class="more" href="#kontakt">Demo anfragen →</a>
+      </article>
+      <article class="proj">
+        <div class="top"><span class="badge">Community-Plattform</span></div>
+        <h3>Genealogie-Archiv</h3>
+        <p>Ein digitales Stammbaum-Archiv für eine große Familiengemeinschaft. Mitglieder finden Verwandte, prüfen über einen Verwandtschaftsfinder, wie sie miteinander verbunden sind, und reichen Korrekturen und Fotos ein, die vor der Freigabe moderiert werden.</p>
+        <p class="stack">Node.js · Express · SQLite · Login & Rollen · Moderation</p>
+        <a class="more" href="#kontakt">Demo anfragen →</a>
+      </article>
+      <article class="proj">
+        <div class="top"><span class="badge">E-Commerce & 3D</span></div>
+        <h3>Schmuck-Shop mit Konfigurator</h3>
+        <p>Ein Online-Shop für ein Schmucklabel mit eigenem 3D-Ringkonfigurator. Kundinnen gestalten Buchstabenringe direkt im Browser, mit realistischen Metalloberflächen und Steinbesatz entlang der Buchstabenform. Sie sehen ihr Stück, bevor es gefertigt wird.</p>
+        <p class="stack">E-Commerce · Three.js · PBR-Materialien · Fontgeometrie</p>
+        <a class="more" href="#kontakt">Demo anfragen →</a>
+      </article>
+    </div>
+  </section>
+
+  <section id="leistungen" aria-labelledby="h-leist">
+    <div class="sec-head">
+      <h2 id="h-leist">Wo ich helfe</h2>
+      <p class="prose">Vier Stufen, vom ersten Shop bis zur Plattform. Sie steigen dort ein, wo Ihr Unternehmen heute steht. Jede Stufe baut auf der vorherigen auf, und keine braucht ein großes IT-Team.</p>
+    </div>
+    <div class="ladder">
+      <div class="rung">
+        <div class="lvl"><strong>1</strong>Stufe</div>
+        <div><h3>Online verkaufen</h3><p class="who">Für Gründer, Manufakturen und kleine Marken</p></div>
+        <ul><li>Shop-Aufbau mit Shopify oder WooCommerce</li><li>Produkttexte, Bilder und SEO mit KI erstellen</li><li>Zahlung, Versand und Rechtstexte sauber einrichten</li></ul>
+      </div>
+      <div class="rung">
+        <div class="lvl"><strong>2</strong>Stufe</div>
+        <div><h3>Arbeit automatisieren</h3><p class="who">Für Teams, die zu viel kopieren und nachpflegen</p></div>
+        <ul><li>KI-Assistenten für Angebote, E-Mails und Recherche</li><li>Formulare, Leads und Daten automatisch ins richtige System</li><li>Schulung, damit das Team KI sicher selbst nutzt</li></ul>
+      </div>
+      <div class="rung">
+        <div class="lvl"><strong>3</strong>Stufe</div>
+        <div><h3>Vertrieb digitalisieren</h3><p class="who">Für Vertriebsorganisationen mit wachsender Pipeline</p></div>
+        <ul><li>Vertriebsprozess vom Lead bis zur Rechnung neu denken</li><li>CRM-Einführung, etwa Salesforce, und Anbindung an Website und ERP</li><li>KI-Anwendungsfälle mit messbarem Nutzen auswählen und einführen</li></ul>
+      </div>
+      <div class="rung">
+        <div class="lvl"><strong>4</strong>Stufe</div>
+        <div><h3>Plattformen bauen</h3><p class="who">Für Unternehmen, die ein eigenes digitales Produkt wollen</p></div>
+        <ul><li>Portale und Marktplätze, z. B. für Freelancer und Projektpartner</li><li>KI-gestütztes Matching von Profilen und Anforderungen</li><li>Architektur, Integration (z. B. Boomi) und Steuerung der Umsetzung</li></ul>
+      </div>
+    </div>
+  </section>
+
+  <section id="vertrieb" aria-labelledby="h-vt">
+    <div class="sales-grid">
+      <div>
+        <p class="eyebrow">Strategie & Digitalisierung im Vertrieb</p>
+        <h2 id="h-vt" class="quote" style="margin-top:16px">Ein CRM macht noch keinen digitalen Vertrieb. <em>Erst kommt der Prozess, dann das Tool, dann die KI.</em></h2>
+        <p class="prose" style="margin-top:20px;color:var(--muted)">Viele KI-Projekte im Vertrieb scheitern nicht an der Technik. Sie scheitern daran, dass niemand festgelegt hat, wer welche Entscheidung trifft und welche Daten wo entstehen. Ich habe eine Salesforce-Einführung im Vertrieb verantwortet und weiß, wo es hakt. Deshalb gehe ich in dieser Reihenfolge vor:</p>
+      </div>
+      <ol class="flow">
+        <li><div><b>Diagnose</b><span>Wo verlieren Sie heute Umsatz? Pipeline, Abschlussquoten, Reaktionszeiten und Datenqualität ansehen.</span></div></li>
+        <li><div><b>Prozessdesign</b><span>Den Weg vom ersten Kontakt bis zur Rechnung festlegen, mit klaren Übergaben zwischen Marketing, Vertrieb und Backoffice.</span></div></li>
+        <li><div><b>Datenbasis</b><span>Das CRM als einzige Quelle für Kunden, Kontakte und Chancen. Website, E-Mail und ERP liefern automatisch zu.</span></div></li>
+        <li><div><b>KI gezielt einsetzen</b><span>Dort, wo sie Zeit spart oder bessere Entscheidungen ermöglicht. Ein Mensch bleibt verantwortlich, der EU AI Act ist mitgedacht.</span></div></li>
+        <li><div><b>Befähigen & messen</b><span>Das Team schulen, Kennzahlen festlegen und nach 90 Tagen ehrlich prüfen, was wirkt.</span></div></li>
+      </ol>
+    </div>
+    <div class="usecases" aria-label="Typische KI-Anwendungen im Vertrieb">
+      <span class="chip">Lead-Scoring</span><span class="chip">Profil-zu-Projekt-Matching</span><span class="chip">Angebotsentwürfe</span><span class="chip">Gesprächsvorbereitung</span><span class="chip">CRM-Pflege per Sprache</span><span class="chip">Follow-up-Erinnerungen</span><span class="chip">Pipeline-Prognose</span>
+    </div>
+  </section>
+
+  <section id="ueber" aria-labelledby="h-ueber">
+    <div class="about">
+      <div>
+        <p class="eyebrow">Über mich</p>
+        <h2 id="h-ueber" style="font-size:clamp(34px,4.6vw,52px);margin-top:14px">Zwischen Vorstand und Code-Editor.</h2>
+        <p class="prose" style="margin-top:20px;color:var(--muted)">Als Head of Transformation leite ich ein Programm mit mehreren parallelen Projekten und berichte monatlich an die Geschäftsführung. Am Wochenende baue ich mit KI-Agenten eigene Produkte, von der Idee bis zum Livegang. Diese Kombination ist selten: Ich verstehe, was ein Management entscheiden muss, und ich weiß, was KI heute tatsächlich bauen kann.</p>
+      </div>
+      <div class="facts">
+        <div class="fact"><b>Programm-Erfahrung</b><span>Salesforce und HubSpot im Vertrieb, SAP und Dynamics im Finance, über 100 Webportale</span></div>
+        <div class="fact"><b>Branche</b><span>IT-, Engineering- und Bau-Freelancer: Vermittlung, Matching, Plattformen</span></div>      </div>
+    </div>
+  </section>
+
+  <div class="contact" id="kontakt">
+    <div>
+      <h2>Erzählen Sie mir, was Sie vorhaben.</h2>
+      <p>Ein kurzes Gespräch reicht, um zu klären, auf welcher Stufe Sie stehen und was der nächste sinnvolle Schritt ist.</p>
+    </div>
+    <div class="mail">
+      <code id="addr">hallo@nikdad.ai</code>
+      <button type="button" id="copy">Adresse kopieren</button>
+    </div>
+  </div>
+
+  <footer>
+    <span>nikdad.ai · 2026</span>
+    <span><a href="/impressum.html">Impressum</a> · <a href="/datenschutz.html">Datenschutz</a></span>
+  </footer>
+</main>
+
+<script>
+document.getElementById('copy').addEventListener('click', function(){
+  var b=this, t=document.getElementById('addr').textContent;
+  function sel(){var r=document.createRange();r.selectNodeContents(document.getElementById('addr'));var s=getSelection();s.removeAllRanges();s.addRange(r);b.textContent='Markiert';}
+  try{navigator.clipboard.writeText(t).then(function(){b.textContent='Kopiert';},sel);}catch(e){sel();}
+});
+</script>
+</body>
+</html>
