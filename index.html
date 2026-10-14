@@ -56,10 +56,11 @@ nav a{color:var(--muted);text-decoration:none;font-size:15px;font-weight:500}
 nav a:hover{color:var(--ink)}
 
 /* hero */
-.hero{padding-block:72px 56px;display:grid;grid-template-columns:1.35fr 1fr;gap:56px;align-items:end}
-.hero h1{font-size:clamp(44px,7vw,84px);letter-spacing:-.01em}
+.hero{padding-block:64px 56px;display:grid;grid-template-columns:1.35fr 1fr;gap:36px 56px;align-items:end}
+.hero-head{grid-column:1/-1}
+.hero h1{font-size:clamp(34px,5vw,60px);letter-spacing:-.02em;max-width:none}
 .hero h1 em{font-style:normal;color:var(--lapis)}
-.hero .lead{margin-top:24px;font-size:20px;color:var(--muted);max-width:40ch}
+.hero .lead{font-size:20px;color:var(--muted);max-width:52ch}
 .cta-row{display:flex;gap:12px;flex-wrap:wrap;margin-top:32px}
 .btn{display:inline-flex;align-items:center;gap:8px;padding:12px 20px;border-radius:999px;font-weight:600;font-size:15px;text-decoration:none;border:1px solid var(--ink)}
 .btn.primary{background:var(--ink);color:var(--bg)}
@@ -174,9 +175,11 @@ footer{padding-block:24px 48px;color:var(--muted);font-size:14px;display:flex;ju
 
 <main class="wrap" id="top">
   <div class="hero">
-    <div>
+    <div class="hero-head">
       <p class="eyebrow">Wirtschaftsinformatik · Softwarearchitektur · KI</p>
       <h1 style="margin-top:18px">Mit KI ist Ihre Idee schnell gebaut. <em>Ich sorge dafür, dass sie im Betrieb trägt.</em></h1>
+    </div>
+    <div>
       <p class="lead">Heute kann fast jeder eine Idee in wenigen Tagen mit KI als Prototyp umsetzen. Das ist gut so. Damit daraus eine Anwendung wird, die im Unternehmen wartbar, sicher und produktiv läuft, braucht es Architektur und ein Betriebsmodell. Dabei helfe ich.</p>
       <div class="cta-row">
         <a class="btn primary" href="#kontakt">Projekt besprechen</a>
