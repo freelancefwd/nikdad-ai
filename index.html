@@ -4,9 +4,9 @@
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
 <title>Nikdad.ai – KI-Beratung & Umsetzung</title>
-<meta name="description" content="Nikdad – KI-Berater und Head of Transformation. Vom Online-Shop über Vertriebsdigitalisierung bis zur Plattform: Strategie und Umsetzung mit KI.">
+<meta name="description" content="Nikdad – Wirtschaftsinformatiker und KI-Berater. Ich mache aus KI-Prototypen Anwendungen, die im Unternehmen wartbar, sicher und produktiv laufen: Architektur, Benutzerverwaltung und Betriebsmodell.">
 <meta property="og:title" content="Nikdad.ai – KI-Beratung & Umsetzung">
-<meta property="og:description" content="Nikdad – KI-Berater und Head of Transformation. Vom Online-Shop über Vertriebsdigitalisierung bis zur Plattform: Strategie und Umsetzung mit KI.">
+<meta property="og:description" content="Nikdad – Wirtschaftsinformatiker und KI-Berater. Ich mache aus KI-Prototypen Anwendungen, die im Unternehmen wartbar, sicher und produktiv laufen: Architektur, Benutzerverwaltung und Betriebsmodell.">
 <meta property="og:url" content="https://nikdad.ai/">
 <meta property="og:type" content="website">
 <link rel="canonical" href="https://nikdad.ai/">
@@ -114,6 +114,22 @@ section{padding-block:72px;border-top:1px solid var(--line)}
 .usecases{margin-top:40px;display:flex;flex-wrap:wrap;gap:10px}
 .chip{font-size:14px;border:1px solid var(--line);background:var(--surface);border-radius:999px;padding:7px 14px}
 
+/* prototype vs operation */
+.cmp-wrap{overflow-x:auto;border:1px solid var(--line);border-radius:14px;background:var(--surface)}
+.cmp{width:100%;border-collapse:collapse;min-width:620px;font-size:16px}
+.cmp th,.cmp td{text-align:left;vertical-align:top;padding:16px 20px;border-top:1px solid var(--line)}
+.cmp thead th{border-top:0;font-family:var(--f-mono);font-size:12.5px;font-weight:500;letter-spacing:.08em;text-transform:uppercase;color:var(--muted)}
+.cmp thead th:last-child{color:var(--lapis)}
+.cmp tbody th{font-weight:600;width:18%}
+.cmp td:nth-child(2){color:var(--muted);width:32%}
+.cmp td:last-child{background:var(--lapis-soft)}
+.cmp thead th:last-child{background:var(--lapis-soft)}
+.opmodel{display:grid;grid-template-columns:1fr 1fr;gap:20px;margin-top:20px}
+.opmodel>div{border:1px solid var(--line);border-radius:14px;padding:26px;min-width:0}
+.opmodel h3{font-size:24px;margin-bottom:12px}
+.opmodel ul{margin:0;padding-left:18px;display:grid;gap:8px}
+.opmodel li::marker{color:var(--saffron)}
+
 /* about */
 .about{display:grid;grid-template-columns:1fr 1fr;gap:56px}
 .about .facts{display:grid;gap:18px;align-content:start}
@@ -133,6 +149,7 @@ footer{padding-block:24px 48px;color:var(--muted);font-size:14px;display:flex;ju
 @media (max-width:900px){
   .hero,.sec-head,.sales-grid,.about,.contact{grid-template-columns:1fr}
   .projects{grid-template-columns:1fr}
+  .opmodel{grid-template-columns:1fr}
   .rung{grid-template-columns:1fr;gap:12px}
   .contact{padding:32px}
 }
@@ -145,6 +162,7 @@ footer{padding-block:24px 48px;color:var(--muted);font-size:14px;display:flex;ju
   <div class="wrap">
     <a class="logo" href="#top">nikdad<span>.</span>ai</a>
     <nav aria-label="Hauptnavigation">
+      <a href="#betrieb">Prototyp → Betrieb</a>
       <a href="#projekte">Projekte</a>
       <a href="#leistungen">Leistungen</a>
       <a href="#vertrieb">Vertrieb</a>
@@ -157,12 +175,12 @@ footer{padding-block:24px 48px;color:var(--muted);font-size:14px;display:flex;ju
 <main class="wrap" id="top">
   <div class="hero">
     <div>
-      <p class="eyebrow">Transformation · KI · Produktbau</p>
-      <h1 style="margin-top:18px">Tagsüber Transformation. <em>Nachts Produkte.</em> Beides mit KI.</h1>
-      <p class="lead">Ich bin Nikdad. Ich führe Digitalisierungsprogramme in einem Personaldienstleister und baue nebenbei eigene Produkte mit KI. Diese Erfahrung bringe ich in Ihr Projekt ein, vom ersten Online-Shop bis zur Plattform.</p>
+      <p class="eyebrow">Wirtschaftsinformatik · Softwarearchitektur · KI</p>
+      <h1 style="margin-top:18px">Mit KI ist Ihre Idee schnell gebaut. <em>Ich sorge dafür, dass sie im Betrieb trägt.</em></h1>
+      <p class="lead">Heute kann fast jeder eine Idee in wenigen Tagen mit KI als Prototyp umsetzen. Das ist gut so. Damit daraus eine Anwendung wird, die im Unternehmen wartbar, sicher und produktiv läuft, braucht es Architektur und ein Betriebsmodell. Dabei helfe ich.</p>
       <div class="cta-row">
         <a class="btn primary" href="#kontakt">Projekt besprechen</a>
-        <a class="btn ghost" href="#projekte">Projekte ansehen ↓</a>
+        <a class="btn ghost" href="#betrieb">Vom Prototyp zum Betrieb ↓</a>
       </div>
     </div>
     <aside class="log" aria-label="Aktueller Stand">
@@ -175,6 +193,49 @@ footer{padding-block:24px 48px;color:var(--muted);font-size:14px;display:flex;ju
       </ul>
     </aside>
   </div>
+
+  <section id="betrieb" aria-labelledby="h-betrieb">
+    <div class="sec-head">
+      <h2 id="h-betrieb">Vom Prototyp zum Betrieb</h2>
+      <p class="prose">Ein KI-Prototyp beweist, dass die Idee funktioniert. Sobald echte Nutzer, echte Daten und die IT ins Spiel kommen, gelten andere Anforderungen. Diese Lücke schließe ich: Ich prüfe, was Ihr Prototyp kann, entwerfe die Zielarchitektur und stelle die Anwendung technisch und organisatorisch so auf, dass sie dauerhaft läuft.</p>
+    </div>
+    <div class="cmp-wrap">
+      <table class="cmp">
+        <thead><tr><th scope="col">Thema</th><th scope="col">Prototyp</th><th scope="col">Produktiver Betrieb</th></tr></thead>
+        <tbody>
+          <tr><th scope="row">Nutzer</th><td>Eine Person, meist der Entwickler</td><td>Viele Nutzer mit Rollen, Rechten und Login über das Firmenkonto (SSO)</td></tr>
+          <tr><th scope="row">Daten</th><td>Testdaten, lokal gespeichert</td><td>Echte Daten, DSGVO-konform, mit Backups und Löschkonzept</td></tr>
+          <tr><th scope="row">Änderungen</th><td>Neuer Prompt, neue Version</td><td>Versionierung, Tests und kontrolliertes Deployment</td></tr>
+          <tr><th scope="row">Fehler</th><td>Fallen auf, wenn jemand draufschaut</td><td>Monitoring, Logging und Alarmierung</td></tr>
+          <tr><th scope="row">Schnittstellen</th><td>Copy &amp; Paste, Datei-Upload</td><td>Saubere Anbindung an CRM, ERP und Identitätsdienste</td></tr>
+          <tr><th scope="row">Wissen</th><td>Im Kopf oder im Chatverlauf</td><td>Dokumentiert und an IT oder Dienstleister übergebbar</td></tr>
+          <tr><th scope="row">Verantwortung</th><td>Niemand festgelegt</td><td>Product Owner, Supportprozess und Wartungsplan</td></tr>
+        </tbody>
+      </table>
+    </div>
+    <div class="opmodel">
+      <div>
+        <h3>Technisch aufstellen</h3>
+        <ul>
+          <li>Softwarearchitektur und Datenmodell, die mitwachsen</li>
+          <li>Benutzerverwaltung, Rollen und Single Sign-on</li>
+          <li>Hosting, Deployment-Pipeline und Umgebungen für Test und Produktion</li>
+          <li>Sicherheit, Datenschutz und Protokollierung</li>
+          <li>Schnittstellen zu bestehenden Systemen</li>
+        </ul>
+      </div>
+      <div>
+        <h3>Betriebsmodell entwickeln</h3>
+        <ul>
+          <li>Wer verantwortet die Anwendung fachlich und technisch?</li>
+          <li>Wie laufen Support, Wartung und neue Versionen?</li>
+          <li>Welche Kosten entstehen für Betrieb, Lizenzen und KI-Nutzung?</li>
+          <li>Welche Regeln gelten für KI-Entscheidungen und den EU AI Act?</li>
+          <li>Wie wird das Wissen an Ihr Team übergeben?</li>
+        </ul>
+      </div>
+    </div>
+  </section>
 
   <section id="projekte" aria-labelledby="h-proj">
     <div class="sec-head">
@@ -259,10 +320,11 @@ footer{padding-block:24px 48px;color:var(--muted);font-size:14px;display:flex;ju
     <div class="about">
       <div>
         <p class="eyebrow">Über mich</p>
-        <h2 id="h-ueber" style="font-size:clamp(34px,4.6vw,52px);margin-top:14px">Zwischen Vorstand und Code-Editor.</h2>
-        <p class="prose" style="margin-top:20px;color:var(--muted)">Als Head of Transformation leite ich ein Programm mit mehreren parallelen Projekten und berichte monatlich an die Geschäftsführung. Am Wochenende baue ich mit KI-Agenten eigene Produkte, von der Idee bis zum Livegang. Diese Kombination ist selten: Ich verstehe, was ein Management entscheiden muss, und ich weiß, was KI heute tatsächlich bauen kann.</p>
+        <h2 id="h-ueber" style="font-size:clamp(34px,4.6vw,52px);margin-top:14px">Wirtschaftsinformatiker zwischen Management und Code.</h2>
+        <p class="prose" style="margin-top:20px;color:var(--muted)">Ich bin Nikdad, Wirtschaftsinformatiker mit Erfahrung in Softwarearchitektur und Softwareentwurf. Als Head of Transformation leite ich ein Programm mit mehreren parallelen Projekten und berichte monatlich an die Geschäftsführung. Daneben baue ich mit KI-Agenten eigene Produkte bis zum Livegang. Ich verstehe also beides: was ein Unternehmen für den stabilen Betrieb braucht und was KI heute tatsächlich bauen kann.</p>
       </div>
       <div class="facts">
+        <div class="fact"><b>Fachlicher Hintergrund</b><span>Wirtschaftsinformatik, Softwarearchitektur und Softwareentwurf</span></div>
         <div class="fact"><b>Programm-Erfahrung</b><span>Salesforce und HubSpot im Vertrieb, SAP und Dynamics im Finance, über 100 Webportale</span></div>
         <div class="fact"><b>Branche</b><span>IT-, Engineering- und Bau-Freelancer: Vermittlung, Matching, Plattformen</span></div>      </div>
     </div>
