@@ -131,6 +131,21 @@ section{padding-block:72px;border-top:1px solid var(--line)}
 .opmodel ul{margin:0;padding-left:18px;display:grid;gap:8px}
 .opmodel li::marker{color:var(--saffron)}
 
+/* localhost moment */
+.lh{display:grid;grid-template-columns:1fr 1fr;gap:40px;align-items:center;margin-bottom:40px}
+.browser{border:1px solid var(--line);border-radius:12px;background:var(--surface);overflow:hidden;min-width:0;box-shadow:0 12px 32px -18px color-mix(in srgb,var(--ink) 40%,transparent)}
+.browser .bar{display:flex;align-items:center;gap:6px;padding:10px 12px;border-bottom:1px solid var(--line);background:var(--bg)}
+.browser .bar i{width:10px;height:10px;border-radius:50%;background:var(--line)}
+.browser .url{margin-left:10px;flex:1;min-width:0;font-family:var(--f-mono);font-size:13px;color:var(--muted);background:var(--surface);border:1px solid var(--line);border-radius:999px;padding:4px 12px;white-space:nowrap;overflow:hidden;text-overflow:ellipsis}
+.browser .err{padding:44px 28px;display:grid;gap:8px}
+.browser .err b{font-size:21px;font-weight:600}
+.browser .err span{color:var(--muted)}
+.browser .err small{font-family:var(--f-mono);font-size:12px;color:var(--muted);margin-top:8px;letter-spacing:.04em}
+.lh-text{display:grid;gap:12px;min-width:0}
+.lh-text h3{font-size:30px}
+.lh-text p:not(.eyebrow){color:var(--muted)}
+code{font-family:var(--f-mono);font-size:.88em;background:var(--lapis-soft);color:var(--lapis);padding:1px 6px;border-radius:5px}
+
 /* about */
 .about{display:grid;grid-template-columns:1fr 1fr;gap:56px}
 .about .facts{display:grid;gap:18px;align-content:start}
@@ -150,7 +165,7 @@ footer{padding-block:24px 48px;color:var(--muted);font-size:14px;display:flex;ju
 @media (max-width:900px){
   .hero,.sec-head,.sales-grid,.about,.contact{grid-template-columns:1fr}
   .projects{grid-template-columns:1fr}
-  .opmodel{grid-template-columns:1fr}
+  .opmodel,.lh{grid-template-columns:1fr}
   .rung{grid-template-columns:1fr;gap:12px}
   .contact{padding:32px}
 }
@@ -202,10 +217,27 @@ footer{padding-block:24px 48px;color:var(--muted);font-size:14px;display:flex;ju
       <h2 id="h-betrieb">Vom Prototyp zum Betrieb</h2>
       <p class="prose">Ein KI-Prototyp beweist, dass die Idee funktioniert. Sobald echte Nutzer, echte Daten und die IT ins Spiel kommen, gelten andere Anforderungen. Diese Lücke schließe ich: Ich prüfe, was Ihr Prototyp kann, entwerfe die Zielarchitektur und stelle die Anwendung technisch und organisatorisch so auf, dass sie dauerhaft läuft.</p>
     </div>
+    <div class="lh">
+      <div class="browser" role="img" aria-label="Browserfenster mit der Fehlermeldung: localhost hat die Verbindung abgelehnt">
+        <div class="bar"><i></i><i></i><i></i><span class="url">http://localhost:3000</span></div>
+        <div class="err">
+          <b>Diese Website ist nicht erreichbar</b>
+          <span><code>localhost</code> hat die Verbindung abgelehnt.</span>
+          <small>ERR_CONNECTION_REFUSED</small>
+        </div>
+      </div>
+      <div class="lh-text">
+        <p class="eyebrow">Der localhost-Moment</p>
+        <h3>„Schau mal, läuft schon!“</h3>
+        <p>Es passiert ständig: Jemand baut an einem Abend mit KI eine App, ist zu Recht begeistert und schickt den Link stolz ans ganze Team. Der Link lautet <code>http://localhost:3000</code>. Bei allen anderen erscheint nur eine Fehlermeldung.</p>
+        <p><code>localhost</code> bedeutet „dieser Rechner“. Die App läuft also, aber nur auf dem eigenen Laptop. Genau an dieser Stelle fängt meine Arbeit an.</p>
+      </div>
+    </div>
     <div class="cmp-wrap">
       <table class="cmp">
         <thead><tr><th scope="col">Thema</th><th scope="col">Prototyp</th><th scope="col">Produktiver Betrieb</th></tr></thead>
         <tbody>
+          <tr><th scope="row">Adresse</th><td><code>http://localhost:3000</code></td><td>Eigene Domain mit SSL-Zertifikat, erreichbar für alle Berechtigten</td></tr>
           <tr><th scope="row">Nutzer</th><td>Eine Person, meist der Entwickler</td><td>Viele Nutzer mit Rollen, Rechten und Login über das Firmenkonto (SSO)</td></tr>
           <tr><th scope="row">Daten</th><td>Testdaten, lokal gespeichert</td><td>Echte Daten, DSGVO-konform, mit Backups und Löschkonzept</td></tr>
           <tr><th scope="row">Änderungen</th><td>Neuer Prompt, neue Version</td><td>Versionierung, Tests und kontrolliertes Deployment</td></tr>
@@ -279,7 +311,7 @@ footer{padding-block:24px 48px;color:var(--muted);font-size:14px;display:flex;ju
       <div class="rung">
         <div class="lvl"><strong>1</strong>Stufe</div>
         <div><h3>Online verkaufen</h3><p class="who">Für Gründer, Manufakturen und kleine Marken</p></div>
-        <ul><li>Shop-Aufbau mit Shopify oder WooCommerce</li><li>Produkttexte, Bilder und SEO mit KI erstellen</li><li>Zahlung, Versand und Rechtstexte sauber einrichten</li></ul>
+        <ul><li>Shop-Aufbau mit Shopify oder WooCommerce, mit Erfahrung aus Consumer Goods</li><li>Produkttexte, Bilder und SEO mit KI erstellen</li><li>Zahlung, Versand und Rechtstexte sauber einrichten</li></ul>
       </div>
       <div class="rung">
         <div class="lvl"><strong>2</strong>Stufe</div>
@@ -289,12 +321,12 @@ footer{padding-block:24px 48px;color:var(--muted);font-size:14px;display:flex;ju
       <div class="rung">
         <div class="lvl"><strong>3</strong>Stufe</div>
         <div><h3>Vertrieb digitalisieren</h3><p class="who">Für Vertriebsorganisationen mit wachsender Pipeline</p></div>
-        <ul><li>Vertriebsprozess vom Lead bis zur Rechnung neu denken</li><li>CRM-Einführung, etwa Salesforce, und Anbindung an Website und ERP</li><li>KI-Anwendungsfälle mit messbarem Nutzen auswählen und einführen</li></ul>
+        <ul><li>Vertriebsprozess vom Lead bis zur Rechnung neu denken</li><li>CRM-Einführung mit Salesforce oder HubSpot und Anbindung an Website und ERP, z. B. Business Central</li><li>KI-Anwendungsfälle mit messbarem Nutzen auswählen und einführen</li></ul>
       </div>
       <div class="rung">
         <div class="lvl"><strong>4</strong>Stufe</div>
         <div><h3>Plattformen bauen</h3><p class="who">Für Unternehmen, die ein eigenes digitales Produkt wollen</p></div>
-        <ul><li>Portale und Marktplätze, z. B. für Freelancer und Projektpartner</li><li>KI-gestütztes Matching von Profilen und Anforderungen</li><li>Architektur, Integration (z. B. Boomi) und Steuerung der Umsetzung</li></ul>
+        <ul><li>B2B-Plattformen, Kunden- und Partnerportale sowie Marktplätze</li><li>KI-gestütztes Matching von Profilen und Anforderungen</li><li>Architektur, Integration (z. B. Boomi) und Steuerung der Umsetzung</li></ul>
       </div>
     </div>
   </section>
@@ -304,7 +336,7 @@ footer{padding-block:24px 48px;color:var(--muted);font-size:14px;display:flex;ju
       <div>
         <p class="eyebrow">Strategie & Digitalisierung im Vertrieb</p>
         <h2 id="h-vt" class="quote" style="margin-top:16px">Ein CRM macht noch keinen digitalen Vertrieb. <em>Erst kommt der Prozess, dann das Tool, dann die KI.</em></h2>
-        <p class="prose" style="margin-top:20px;color:var(--muted)">Viele KI-Projekte im Vertrieb scheitern nicht an der Technik. Sie scheitern daran, dass niemand festgelegt hat, wer welche Entscheidung trifft und welche Daten wo entstehen. Ich habe eine Salesforce-Einführung im Vertrieb verantwortet und weiß, wo es hakt. Deshalb gehe ich in dieser Reihenfolge vor:</p>
+        <p class="prose" style="margin-top:20px;color:var(--muted)">Viele KI-Projekte im Vertrieb scheitern nicht an der Technik. Sie scheitern daran, dass niemand festgelegt hat, wer welche Entscheidung trifft und welche Daten wo entstehen. Als zertifizierter Salesforce-Berater habe ich CRM-Einführungen im Vertrieb verantwortet und weiß, wo es hakt. Deshalb gehe ich in dieser Reihenfolge vor:</p>
       </div>
       <ol class="flow">
         <li><div><b>Diagnose</b><span>Wo verlieren Sie heute Umsatz? Pipeline, Abschlussquoten, Reaktionszeiten und Datenqualität ansehen.</span></div></li>
@@ -328,7 +360,9 @@ footer{padding-block:24px 48px;color:var(--muted);font-size:14px;display:flex;ju
       </div>
       <div class="facts">
         <div class="fact"><b>Fachlicher Hintergrund</b><span>Wirtschaftsinformatik, Softwarearchitektur und Softwareentwurf</span></div>
-        <div class="fact"><b>Programm-Erfahrung</b><span>Salesforce und HubSpot im Vertrieb, SAP und Dynamics im Finance, über 100 Webportale</span></div>
+        <div class="fact"><b>CRM & Vertrieb</b><span>Zertifizierter Salesforce-Berater, dazu HubSpot</span></div>
+        <div class="fact"><b>ERP & Finance</b><span>SAP, Microsoft Dynamics 365 und Business Central</span></div>
+        <div class="fact"><b>E-Commerce & Portale</b><span>Online-Shops für Consumer Goods, B2B-Plattformen und Portale, über 100 Webportale</span></div>
         <div class="fact"><b>Branche</b><span>IT-, Engineering- und Bau-Freelancer: Vermittlung, Matching, Plattformen</span></div>      </div>
     </div>
   </section>
